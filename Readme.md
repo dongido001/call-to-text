@@ -54,12 +54,3 @@ Before we can get started, you’ll need to make sure to have:
 
     `$ npm start`
 
----
-
-# Contact me
-
-If you have any questions, feedback or just want to show me what you build, feel free to reach out to me:
-
-- Twitter: [@chatterboxcoder](https://twitter.com/chatterboxCoder)
-- GitHub: nokenwa
-- Email: nokenwa@twilio.com
