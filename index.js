@@ -8,11 +8,11 @@ const path = require("path");
 
 require("dotenv").config();
 
-//Include Google Speech to Text
+// Include Google Speech to Text
 const speech = require("@google-cloud/speech");
 const client = new speech.SpeechClient();
 
-//Configure Transcription Request
+//  Configure Transcription Request
 const request = {
   config: {
     encoding: "MULAW",
@@ -24,7 +24,6 @@ const request = {
 
 wss.on("connection", function connection(ws) {
   console.log("New Connection Initiated");
-
   let recognizeStream = null;
 
   ws.on("message", function incoming(message) {
@@ -71,17 +70,15 @@ app.get("/", (req, res) => res.sendFile(path.join(__dirname, "/index.html")));
 
 app.post("/", (req, res) => {
   res.set("Content-Type", "text/xml");
-
   res.send(`
     <Response>
       <Start>
         <Stream url="wss://${req.headers.host}/"/>
       </Start>
-      <Say>I will stream the next 60 seconds of audio through your websocket</Say>
+      <Say>Hello</Say>
       <Pause length="60" />
     </Response>
   `);
 });
 
-console.log("Listening on Port 8080");
-server.listen(8080);
+server.listen(process.env.PORT || 8080, () => console.log("Listening on Port 8080"));
