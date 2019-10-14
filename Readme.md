@@ -36,7 +36,7 @@ Before we can get started, you’ll need to make sure to have:
 2.  Modify the `.env.sample` file to include the path to your JSON service account key and save it as a `.env` file
 3.  Run the following commands:
 
-    Buy a Phone Number (_I have used the `GB` country code to buy a mobile number, but feel free to change this for a [number local to you](https://support.twilio.com/hc/en-us/articles/223183068-Twilio-international-phone-number-availability-and-their-capabilities)._)
+    >Buy a Phone Number (_I have used the `GB` country code to buy a mobile number, but feel free to change this for a [number local to you](https://support.twilio.com/hc/en-us/articles/223183068-Twilio-international-phone-number-availability-and-their-capabilities)._)
 
     `$ twilio phone-numbers:buy:mobile --country-code GB`
 
